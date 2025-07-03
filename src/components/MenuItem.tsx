@@ -11,7 +11,7 @@ export default function MenuItem({ item, addItem }: MenuItemProps) {
       className="border-2 rounded-lg border-teal-400 hover:bg-teal-200 w-full p-3 flex justify-between cursor-pointer"
       onClick={() => addItem(item)}
     >
-      <p>{item.name}</p>
+      <p>{item.icon} {item.name}</p>
       <p className="font-black">S/ {item.price}</p>
     </button>
   );
