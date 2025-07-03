@@ -15,10 +15,10 @@ export default function OrderContents({ order, removeItem }: OrderContentsProps)
         {order.length === 0 ?
           <p className="text-center">La orden esta vacía.</p> :
           (
-            order.map( item => (
-              <div 
-              key={item.id}
-              className="flex justify-between items-center border-t border-gray-200 py-5 last-of-type:border-b"
+            order.map(item => (
+              <div
+                key={item.id}
+                className="flex justify-between items-center border-t border-gray-200 py-5 last-of-type:border-b"
               >
                 <div>
                   <p className="text-lg">
@@ -28,9 +28,9 @@ export default function OrderContents({ order, removeItem }: OrderContentsProps)
                     Cantidad: {item.quantity} - {formatCurrency(item.price * item.quantity)}
                   </p>
                 </div>
-                <button 
+                <button
                   className="bg-red-600 h-8 w-8 rounded-full text-white font-black cursor-pointer"
-                  onClick={() => removeItem(item.id)}    
+                  onClick={() => removeItem(item.id)}
                 >
                   X
                 </button>
